@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="_rootPane" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="FX_Launcher.Controller.MainController">
+    <bottom>
+        <Pane fx:id="_musicPane" prefHeight="54.0" prefWidth="1240.0" style="-fx-background-color: grey;"
+              BorderPane.alignment="CENTER_LEFT">
+            <Pane layoutX="512.0" prefHeight="54.0" prefWidth="50.0">
+                <JFXSpinner fx:id="_processMusic" layoutY="2.0" prefHeight="54.0" prefWidth="50.0" progress="0.0"
+                            radius="30.0" stylesheets="@../css/processIndicator.css"/>
+                <JFXButton fx:id="_playPause" onMouseClicked="#MouseEvent" prefHeight="54.0" prefWidth="52.0"
+                           style="-fx-border-color: black;" text=" "/>
+            </Pane>
+            <JFXButton fx:id="_back" disable="true" layoutX="450.0" layoutY="2.0" onMouseClicked="#MouseEvent"
+                       prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: black;" text=" "/>
+            <JFXButton fx:id="_next" layoutX="575.0" layoutY="2.0" onMouseClicked="#MouseEvent" prefHeight="50.0"
+                       prefWidth="50.0" style="-fx-border-color: black;" text=" "/>
+            <JFXButton fx:id="_listMusicDir" layoutX="978.0" layoutY="2.0" onMouseClicked="#MouseEvent"
+                       prefHeight="32.0" prefWidth="32.0" style="-fx-border-color: black;" text=" "/>
+            <Label fx:id="_timeLabel" layoutX="656.0" layoutY="19.0" text="Label"/>
+        </Pane>
+    </bottom>
+    <left>
+        <VBox fx:id="_vboxController" alignment="CENTER_LEFT" onMouseEntered="#MouseEvent" onMouseExited="#MouseEvent"
+              prefHeight="470.0" prefWidth="50.0" spacing="10.0" style="-fx-background-color: gray;"
+              BorderPane.alignment="CENTER">
+            <JFXButton fx:id="_programButton" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#MouseEvent"
+                       prefHeight="32.0" prefWidth="200.0" style="-fx-border-color: black;" text=" "/>
+            <JFXButton fx:id="_gameButton" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#MouseEvent"
+                       prefHeight="32.0" prefWidth="200.0" style="-fx-border-color: black;" text=" "/>
+            <JFXButton fx:id="_youtubeButton" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#MouseEvent"
+                       prefHeight="32.0" prefWidth="200.0" style="-fx-border-color: black;" text=" "/>
+        </VBox>
+    </left>
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="398.0" style="-fx-background-color: grey;"
+              BorderPane.alignment="CENTER">
+            <JFXButton fx:id="_home" onMouseClicked="#MouseEvent" prefHeight="54.0" prefWidth="54.0"
+                       style="-fx-border-color: black;" text=" ">
+                <HBox.margin>
+                    <Insets/>
+                </HBox.margin>
+            </JFXButton>
+            <Label fx:id="_textInfo" alignment="CENTER" prefHeight="45.0" prefWidth="969.0" text="Новость">
+                <font>
+                    <Font name="Times New Roman Bold" size="40.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets left="-5.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
+    </top>
+</BorderPane>
